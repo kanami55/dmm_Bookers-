@@ -1,19 +1,23 @@
+ <p class="notice"><%=flash[:notice] %></p>
  <h1>Books</h1>
-    <% @books.each do |book| %>
     <table>
+        <thead>
         <tr>
-           <th>Title</th>
-           <th>Body</th>
+           <th class="title">Title</th>
+           <th class="body">Body</th>
            <th></th>
         </tr>
+        </thead>
+        <tbody>
+          <p><% @books.each do |book| %></p>
         <tr>
-           <td><span><%= book.title %></span></td>
-            <td><span> <%= book.body %></span></td>
+           <td class="title"><span><%= book.title %></span></td>
+            <td class="body"><span> <%= book.body %></span></td>
             <td><span><%= link_to 'Show', book_path(book.id) %></span></td>
             <td><span><%= link_to 'Edit', edit_book_path(book.id) %></span></td>
             <td><span><%= link_to 'Destroy',destroy_book_path(book.id),method: :delete,"data-confirm" => "Are you sure？" %></span></td>
-
         </tr>
+        </tbody>
     </table>
 <% end %>
 
@@ -31,13 +35,19 @@
 
 <%= form_with model: @Book, url: '/books', method: :post, local:true do |f| %>
 
-<h4>Title</h4>
+<labl>Title</labl>
+<div class="text">
 <%= f.text_field :title %>
+</div>
 
-<h4>Body</h4>
+<labl>Body</labl>
+<div class="text">
 <%= f.text_area :body %>
+</div>
 
+<div class="subbmit">
 <%= f.submit 'Create Book' %>
+</div>
 
 <% end %>
 

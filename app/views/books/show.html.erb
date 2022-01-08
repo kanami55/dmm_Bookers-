@@ -1,15 +1,18 @@
-<%=flash[:notice] %>
+ <p class="notice"><%=flash[:notice] %></p>
 
-<div class="text_flex">
-<h2>Title:</h2>
-<p><%= @book.title %></p>
-</div>
+<p>
+<strong>Title:</strong>
+<%= @book.title %>
+</p>
 
-<div class="text_flex">
-<h2>Body:</h2>
-<p><%= @book.body %></p>
-</div>
+
+<p>
+<strong>Body:</strong>
+<%= @book.body %>
+</p>
+
 
 <span><%= link_to 'Edit', edit_book_path(@book.id) %></span>
+|
 <span><%= link_to 'Back', index_book_path(@books) %></span>
 

@@ -13,3 +13,65 @@
  *= require_tree .
  *= require_self
  */
+/*共通部分*/
+body {
+  background-color: #fff;
+    color: #333;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+ }
+
+ a {
+   color: #333;
+   cursor: pointer;
+   text-decoration: underline;
+ }
+
+
+p {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+}
+
+/*flash*/
+.notice {
+  color: green;
+}
+
+/*一覧画面*/
+th {
+  padding-bottom: 5px
+}
+
+td {
+  padding-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+}
+
+tr {
+  display: table-row;
+   vertical-align: inherit;
+}
+
+.title {
+  width: 192px
+}
+
+.body {
+  width: 400px
+}
+
+/*bottom*/
+.text,
+.submit {
+  margin-bottom: 10px
+}
